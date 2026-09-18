@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-gray: #1A1A1A;
+}
+
+@layer base {
+  :root {
+    --bg: #ffffff;
+    --surface: #eaffe9;
+    --surface-container-lowest: #ffffff;
+    --surface-container-low: #e4f9e3;
+    --surface-container: #def4de;
+    --surface-container-high: #d9eed8;
+    --surface-container-highest: #d3e8d3;
+    --inverse-surface: #233426;
+    --inverse-on-surface: #e1f6e1;
+    --accent-1: #35e639;
+    --accent-2: #006e0c;
+    --text-hi: #0e1f12;
+    --text-mid: #4e6351;
+    --text-light: #6c7b66;
+    --match: #1e9e4a;
+    --gap: #e8a33d;
+    --gap-required: #dd5a4a;
+    --outline: #bbcbb3;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans), 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(52, 211, 153, 0.35);
+    color: #ffffff;
+  }
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-sans-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Halftone dot pattern for monoline illustrations */
+.bg-halftone-dots {
+  background-image: radial-gradient(#6c7b66 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+/* Subtle static noise overlay (3% opacity, static, no animation) */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Hide scrollbars cleanly */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #bbcbb3;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6c7b66;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Signal - Internship Triage Copilot",
+  "description": "Evidence-based internship triage copilot with Aurora authentication, deterministic fit analysis, and grounded outreach drafts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
